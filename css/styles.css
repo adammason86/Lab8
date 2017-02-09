@@ -1,52 +1,61 @@
 body {
-  background-image: url(../img/dark_embroidery.png);
+    background-image: url(../img/dark_embroidery.png);
 }
-form {
-  width: 500px;
-  height: 80px;
-  padding: 10px;
 
+form {
+    width: 500px;
+    height: 80px;
+    padding: 10px;
 }
+
 .wrapper {
-  background-color: white;
-  position: absolute;
-  left: 50%;
-  margin-left: -250px;
-  box-shadow: 5px 5px 10px black;
-  border-radius: 3px;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    margin-left: -250px;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 3px;
 }
+
 #content {
-  visibility: hidden;
-  background-color: white;
-  position: absolute;
-  left: 50%;
-  top: 150px;
-  margin-left: -250px;
-  box-shadow: 5px 5px 10px black;
-  border-radius: 3px;
+    visibility: hidden;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 150px;
+    margin-left: -250px;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 3px;
 }
+
 ul {
-  display: block;
-  list-style-type: none;
-  width: 500px;
-  padding: 10px;
+    display: block;
+    list-style-type: none;
+    width: 500px;
+    padding: 10px;
 }
+
 span {
-  margin-left: 10px;
-  margin-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
+
 .linePrice {
-  float: right;
+    float: right;
 }
+
 #itemList {
-  border-bottom: 1px solid black;
+    border-bottom: 1px solid black;
 }
+
 .total {
-  float: right;
+    float: right;
 }
+
 .totalLabel {
-  float: left;
+    float: left;
 }
+
 .totalLine {
-  height: 20px;
+    height: 20px;
 }
