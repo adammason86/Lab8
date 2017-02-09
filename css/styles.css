@@ -5,6 +5,7 @@ form {
   width: 500px;
   height: 80px;
   padding: 10px;
+
 }
 .wrapper {
   background-color: white;
@@ -12,6 +13,7 @@ form {
   left: 50%;
   margin-left: -250px;
   box-shadow: 5px 5px 10px black;
+  border-radius: 3px;
 }
 #content {
   visibility: hidden;
@@ -21,6 +23,7 @@ form {
   top: 150px;
   margin-left: -250px;
   box-shadow: 5px 5px 10px black;
+  border-radius: 3px;
 }
 ul {
   display: block;
@@ -43,4 +46,7 @@ span {
 }
 .totalLabel {
   float: left;
+}
+.totalLine {
+  height: 20px;
 }

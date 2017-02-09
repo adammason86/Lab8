@@ -1,8 +1,13 @@
 // Defines variable for array of prices and totals that exist outside of list
 var priceArray=[];
 var total=0;
-var grandTotal = document.createElement("span");
+
+// Creates elements for the second ul 'total' to have a li with 2 spans inside for content
+  var totalLine = document.createElement("li");
+  var grandTotal = document.createElement("span");
   var totalLabel = document.createElement("span");
+  totalLine.appendChild(grandTotal);
+  totalLine.appendChild(totalLabel);
   totalLabel.textContent = "Total";
 
 // Function called by button press
@@ -35,14 +40,13 @@ function addItem(){
   var qty = document.createElement("span");
   var name = document.createElement("span");
   var linePrice = document.createElement("span");
-  var totalLine = document.createElement("li");
+
 
   // Adds child relationship to created elements
   item.appendChild(qty);
   item.appendChild(name);
   item.appendChild(linePrice);
-  totalLine.appendChild(grandTotal);
-  totalLine.appendChild(totalLabel);
+
 
   // Add class names to spans for css styling
   qty.className = "qty";
@@ -50,12 +54,11 @@ function addItem(){
   linePrice.className = "linePrice";
   grandTotal.className = "total";
   totalLabel.className = "totalLabel";
+  totalLine.className = "totalLine";
 
   // Sets text value of new elements
   qty.textContent = getQty()+"x";
   name.textContent = getItem();
-
-
   linePrice.textContent = linePriceContent
 
 
