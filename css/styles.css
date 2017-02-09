@@ -1,0 +1,40 @@
+body {
+  background-image: url(../img/dark_embroidery.png);
+}
+form {
+  width: 500px;
+  height: 80px;
+  padding: 10px;
+}
+.wrapper {
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  margin-left: -250px;
+  box-shadow: 5px 5px 10px black;
+}
+#content {
+  visibility: hidden;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 150px;
+  margin-left: -250px;
+  box-shadow: 5px 5px 10px black;
+}
+ul {
+  display: block;
+  list-style-type: none;
+  width: 500px;
+  padding: 10px;
+}
+span {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.linePrice {
+  float: right;
+}
+.grandTotal {
+  float: right;
+}
