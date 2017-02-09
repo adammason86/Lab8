@@ -10,6 +10,12 @@ form {
 input {
   margin: 5px;
 }
+h2 {
+  text-align: center;
+}
+hr {
+  width: 90%;
+}
 .wrapper {
     background-color: white;
     position: absolute;
@@ -24,7 +30,7 @@ input {
     background-color: white;
     position: absolute;
     left: 50%;
-    top: 170px;
+    top: 220px;
     margin-left: -250px;
     box-shadow: 5px 5px 10px black;
     border-radius: 3px;
@@ -44,10 +50,6 @@ span {
 
 .linePrice {
     float: right;
-}
-
-#itemList {
-    border-bottom: 1px solid black;
 }
 
 .total {
