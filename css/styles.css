@@ -35,6 +35,12 @@ span {
 .linePrice {
   float: right;
 }
-.grandTotal {
+#itemList {
+  border-bottom: 1px solid black;
+}
+.total {
   float: right;
+}
+.totalLabel {
+  float: left;
 }

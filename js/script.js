@@ -1,7 +1,9 @@
-// Defines variable for array of prices
+// Defines variable for array of prices and totals that exist outside of list
 var priceArray=[];
 var total=0;
 var grandTotal = document.createElement("span");
+  var totalLabel = document.createElement("span");
+  totalLabel.textContent = "Total";
 
 // Function called by button press
 function addItem(){
@@ -23,38 +25,45 @@ function addItem(){
   getItem();
   getQty();
   var price=getPrice();
+  var linePriceContent = Number(price*getQty());
 
   // Takes price and adds it to array
-  priceArray.push(Number(price));
+  priceArray.push(Number(linePriceContent));
 
-  // Creates a list item element. Creates spans for each pulled value
+  // Creates list item elements. Creates spans for each line item content
   var item = document.createElement("li");
   var qty = document.createElement("span");
   var name = document.createElement("span");
   var linePrice = document.createElement("span");
+  var totalLine = document.createElement("li");
 
-
-  // Adds child relationship of qty, price, name to list item
+  // Adds child relationship to created elements
   item.appendChild(qty);
   item.appendChild(name);
   item.appendChild(linePrice);
+  totalLine.appendChild(grandTotal);
+  totalLine.appendChild(totalLabel);
 
   // Add class names to spans for css styling
   qty.className = "qty";
   name.className = "name";
   linePrice.className = "linePrice";
+  grandTotal.className = "total";
+  totalLabel.className = "totalLabel";
 
   // Sets text value of new elements
   qty.textContent = getQty()+"x";
   name.textContent = getItem();
-  linePrice.textContent = (price*getQty());//.toLocaleString('us-US',{style: 'currency', currency: 'USD'});
+
+
+  linePrice.textContent = linePriceContent
 
 
   // Adds line item to unordered list
   document.getElementById("itemList").appendChild(item);
 
   // Adds line item for total to second unorderd list
-  document.getElementById("total").appendChild(grandTotal);
+  document.getElementById("total").appendChild(totalLine);
 
   // Changes visibility of content div once items are added
   document.getElementById("content").style.visibility = "visible";
@@ -66,6 +75,7 @@ function addItem(){
   });
 
   // Writes total from forEach loop to second unorder list
+
   grandTotal.textContent = total;
 
   console.log(priceArray);
