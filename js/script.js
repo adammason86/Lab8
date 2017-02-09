@@ -20,20 +20,20 @@ function addItem() {
     }
     // Returns the value entered in 'Qty' text field
     function getQty() {
-        return document.getElementById('inputQty').value;
+        return Number(document.getElementById('inputQty').value);
     }
     // Returns the value entered in 'Price' text field
     function getPrice() {
-        return document.getElementById('inputPrice').value;
+        return Number(document.getElementById('inputPrice').value);
     }
     // Calls the functions and delares other variables
     getItem();
     getQty();
-    var price = getPrice();
+    var price = Number(getPrice());
     var linePriceContent = Number(price * getQty());
 
     // Takes price and adds it to array
-    priceArray.push(Number(linePriceContent));
+    priceArray.push(linePriceContent);
 
     // Creates list item elements. Creates spans for each line item content
     var item = document.createElement("li");
@@ -57,10 +57,9 @@ function addItem() {
     totalLine.className = "totalLine";
 
     // Sets text value of new elements
-    qty.textContent = getQty() + "x";
+    qty.textContent = getQty();
     name.textContent = getItem();
-    linePrice.textContent = linePriceContent
-
+    linePrice.textContent = linePriceContent.toLocaleString('us-US',{style: 'currency', currency: 'USD'});;
 
     // Adds line item to unordered list
     document.getElementById("itemList").appendChild(item);
@@ -79,8 +78,5 @@ function addItem() {
 
     // Writes total from forEach loop to second unorder list
 
-    grandTotal.textContent = total;
-
-    console.log(priceArray);
-    console.log(total);
+    grandTotal.textContent = total.toLocaleString('us-US',{style: 'currency', currency: 'USD'});
 }
